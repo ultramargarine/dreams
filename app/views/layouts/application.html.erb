@@ -6,17 +6,19 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+  <body class='container'>
+
   <p>my dreamssss page</p>
-<%= yield %>
   
-<ul>
-    <li> <%= link_to 'home', root_path %> </li>
-    <li> <%= link_to 'index', welcome_index_path %> </li>
-    <li> <%= link_to 'hello', welcome_hello_path %> </li>
-    <li> <%= link_to 'dreams', dreams_path %> </li>
-    <li> <%= link_to 'new dream', new_dream_path %> </li>    
-  </ul>
+<ul class='nav nav-tabs'>
+    <li> <%= link_to 'home', root_path, class: 'btn btn-warning' %> </li>
+    <li> <%= link_to 'index', welcome_index_path, class: 'btn btn-danger' %> </li>
+    <li> <%= link_to 'hello', welcome_hello_path, class: 'btn btn-primary' %> </li>
+    <li> <%= link_to 'dreams',  dreams_path, class: 'btn btn-info' %> </li>
+    <li> <%= link_to 'new dream',  new_dream_path, class: 'btn btn-success' %> </li>    
+    
+    </ul>
   
+    <div class='jumbotron' <%= yield %></div>
 </body>
 </html>

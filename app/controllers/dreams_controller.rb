@@ -15,4 +15,8 @@ class DreamsController < ApplicationController
   def dream_params
     params.require(:dream).permit(:author, :content, :photo_url, :rating, :tags)
   end
+  def destroy
+    Dream.find(params[:id]).destroy
+    redirect_to dreams_path
+  end
 end

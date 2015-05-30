@@ -39,3 +39,4 @@ gem 'spring',        group: :development
 # gem 'debugger', group: [:development, :test]
 
 gem 'quiet_assets'
+gem 'twitter-bootstrap-rails'

@@ -8,4 +8,8 @@
 <p>
   <%= raw "<i>#{element.content}</i> tagged with <b>#{element.tags} </b>" %>
   </p>
+  <p>
+    <%= image_tag element.photo_url, size: "200x200" %>
+  </p>
+<p><%= link_to 'Destroy', dream_path(element), data: {confirm: 'Are you sure?'}, method: :delete %></p>
 <% end %>
