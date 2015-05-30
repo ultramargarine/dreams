@@ -9,11 +9,13 @@
 <body>
   <p>my dreamssss page</p>
 <%= yield %>
-
+  
 <ul>
     <li> <%= link_to 'home', root_path %> </li>
     <li> <%= link_to 'index', welcome_index_path %> </li>
     <li> <%= link_to 'hello', welcome_hello_path %> </li>
+    <li> <%= link_to 'dreams', dreams_path %> </li>
+    <li> <%= link_to 'new dream', new_dream_path %> </li>    
   </ul>
   
 </body>
