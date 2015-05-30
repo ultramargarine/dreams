@@ -19,4 +19,6 @@ class DreamsController < ApplicationController
     Dream.find(params[:id]).destroy
     redirect_to dreams_path
   end
+  
+  http_basic_authenticate_with name: "dreamer", password: "duck", only: [:new, :create]  if Rails.env.production?
 end

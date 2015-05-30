@@ -1,15 +1,17 @@
-<h1>Dreams#index</h1>
-<p>Find me in app/views/dreams/index.html.erb</p>
+<h1>Dreams</h1>
 
 <% @dreams.each do |element| %>
 <p><b>
   <%= element.author %>
   </b></p>
 <p>
-  <%= raw "<i>#{element.content}</i> tagged with <b>#{element.tags} </b>" %>
+  <%= raw "<i>#{element.content}</i>" %>
   </p>
+<p><font color="gray" size="2"><%= "tagged with: #{element.tags}" %>
+    </font></p>
+  <p>
   <p>
     <%= image_tag element.photo_url, size: "200x200" %>
   </p>
-<p><%= link_to 'Destroy', dream_path(element), data: {confirm: 'Are you sure?'}, method: :delete %></p>
+<p><font color="orange" size="3"><%= link_to 'Destroy', dream_path(element), data: {confirm: 'Are you sure?'}, method: :delete %></font></p>
 <% end %>
