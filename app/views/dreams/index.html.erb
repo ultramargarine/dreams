@@ -11,7 +11,8 @@
     </font></p>
   <p>
   <p>
-    <%= image_tag element.photo_url, size: "200x200" %>
+    <%= image_tag element.photo_url, size: "200x200", class: 'js-photo' %>
+    <button class='btn btn-danger js-toggle-btn'> Toggle photo</button>
   </p>
 <p><font color="orange" size="3"><%= link_to 'Destroy', dream_path(element), data: {confirm: 'Are you sure?'}, method: :delete %></font></p>
 <% end %>
